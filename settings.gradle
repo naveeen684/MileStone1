@@ -1,0 +1,2 @@
+rootProject.name = "SDUI1"
+include ':app'
