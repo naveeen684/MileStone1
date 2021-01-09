@@ -5,5 +5,6 @@ import com.google.gson.annotations.SerializedName
 
 data class ChildXXXX(
     val child: List<ChildXXXXX>,
-    val component: String
+    val component: String,
+    val verticalPadding: Int
 )

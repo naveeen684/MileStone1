@@ -2,7 +2,6 @@ package com.example.sdui1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.compose.foundation.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -10,13 +9,15 @@ import androidx.compose.ui.platform.setContent
 import androidx.lifecycle.ViewModelProvider
 import com.example.sdui1.ComposeModels.Homepage
 import com.example.sdui1.viewmodels.HomeViewModel
+import androidx.compose.material.Text
 
 class MainActivity : AppCompatActivity() {
 
-    private val mHomeViewModel by lazy {
-        ViewModelProvider(this@MainActivity)
-            .get(HomeViewModel::class.java)
-    }
+        private val mHomeViewModel by lazy {
+            ViewModelProvider(this@MainActivity)
+                    .get(HomeViewModel::class.java)
+        }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
