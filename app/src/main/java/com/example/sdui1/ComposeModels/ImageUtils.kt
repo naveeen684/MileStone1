@@ -12,7 +12,7 @@ import com.bumptech.glide.request.transition.Transition
 import com.example.sdui1.R
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
-const val DEFAULT_RECIPE_IMAGE = R.drawable.coin
+const val DEFAULT_RECIPE_IMAGE = R.drawable.loader
 
 @ExperimentalCoroutinesApi
 @Composable

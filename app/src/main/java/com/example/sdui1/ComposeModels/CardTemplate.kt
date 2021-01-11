@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.material.Text
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.sdui1.data.*
 
@@ -67,12 +68,13 @@ fun Corousal(child: ChildXXXXX) {
     Surface(color = getColor(child.color)) {
         Column() {
             Spacer(modifier = Modifier.padding(vertical = child.child[0].child[0].verticalPadding.dp))
-
-            Text(
-                "Money Transfers",
-                modifier = Modifier.padding(horizontal = child.child[0].child[1].horizontalPadding.dp),
-                style = TextStyle(fontWeight = FontWeight.Bold)
-            )
+            if(child.child[0].child[1].text!=null) {
+                Text(
+                    child.child[0].child[1].text,
+                    modifier = Modifier.padding(horizontal = child.child[0].child[1].horizontalPadding.dp),
+                    style = TextStyle(fontWeight = FontWeight.Bold)
+                )
+            }
 //            Log.d("Hi",child.child[1].component)
             if(child.child[1].id==1) {
                 RowTemplate(child = child.child[1])
@@ -123,7 +125,7 @@ fun CardTemplate(child: ChildXXXXXXXX) {
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 //            Log.d("img",child.child[0].child[0].id)
-
+            Spacer(modifier = Modifier.padding(vertical = 8.dp))
                 val image = loadPicture(url =child.child[0].child[0].id , defaultImage =DEFAULT_RECIPE_IMAGE ).value
                 image?.let { img ->
                     Image(
@@ -137,7 +139,7 @@ fun CardTemplate(child: ChildXXXXXXXX) {
 //                modifier = Modifier.height(child.child[0].child[0].height.dp).width(child.child[0].child[0].width.dp)
 //            )
             Spacer(modifier = Modifier.padding(vertical = child.child[0].child[1].verticalPadding.dp))
-            Text(text = child.child[0].child[2].text)
+            Text(text = child.child[0].child[2].text,style=TextStyle(textAlign = TextAlign.Center))
         }
 
     }
