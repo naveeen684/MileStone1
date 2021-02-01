@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 
 interface ApiRequests {
-    @GET("/")
+    @GET("/1")
     suspend fun getPageModel(): HomePage
 
 }
