@@ -1,4 +1,4 @@
-package com.example.sdui1.ComposeModels
+package com.example.sdui1.utils
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes

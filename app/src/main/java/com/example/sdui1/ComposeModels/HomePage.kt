@@ -1,6 +1,5 @@
 package com.example.sdui1.ComposeModels
 
-import android.util.Log
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
@@ -16,7 +15,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.sdui1.data.*
+import com.example.sdui1.data.HomePage.*
+import com.example.sdui1.utils.DEFAULT_RECIPE_IMAGE
+import com.example.sdui1.utils.loadPicture
 
 @Composable
 fun getColor(color:String): Color {
@@ -126,7 +127,7 @@ fun CardTemplate(child: ChildXXXXXXXX) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 //            Log.d("img",child.child[0].child[0].id)
             Spacer(modifier = Modifier.padding(vertical = 8.dp))
-                val image = loadPicture(url =child.child[0].child[0].id , defaultImage =DEFAULT_RECIPE_IMAGE ).value
+                val image = loadPicture(url =child.child[0].child[0].id , defaultImage = DEFAULT_RECIPE_IMAGE ).value
                 image?.let { img ->
                     Image(
                         bitmap = img.asImageBitmap(),

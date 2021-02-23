@@ -1,7 +1,7 @@
 package com.example.sdui1.network
 
 
-import com.example.sdui1.data.HomePage
+import com.example.sdui1.data.HomePage.HomePage
 import retrofit2.http.GET
 
 
