@@ -1,8 +1,9 @@
-MileStone1
-Clone the repo.
+##SDUI FRAMEWORK
 
-Make sure you have Android Studio Beta Version or Canary Version.
+1)Clone the repo.
 
-Open build.gradle in both app level and project level, click on sync now.
+2)Make sure you have Android Studio Beta Version or Canary Version.
 
-Run the app and emulator
+3)Open build.gradle in both app level and project level, click on sync now.
+
+4)Run the app and emulator
