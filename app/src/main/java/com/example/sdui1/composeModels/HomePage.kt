@@ -108,7 +108,7 @@ fun RowTemplate1(child: ChildXXXXXX,navController: NavHostController?){
         Row() {
             for (element in element.child) {
                 CardTemplate(child = element){
-                    navController?.navigate("Text")
+                    navController?.navigate(element.clickable)
                 }
             }
         }
@@ -122,7 +122,7 @@ fun RowTemplate(child: ChildXXXXXX, navController: NavHostController?){
         ScrollableRow() {
             for(element in child.child[0].child) {
                 CardTemplate(child = element){
-                    navController?.navigate("text")
+                    navController?.navigate(element.clickable)
                 }
             }
         }
@@ -136,7 +136,6 @@ fun CardTemplate(child: ChildXXXXXXXX,clickAction:() ->Unit) {
     })) {
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-//            Log.d("img",child.child[0].child[0].id)
             Spacer(modifier = Modifier.padding(vertical = 8.dp))
             val image = loadPicture(url =child.child[0].child[0].id , defaultImage =DEFAULT_RECIPE_IMAGE ).value
             image?.let { img ->
@@ -146,10 +145,6 @@ fun CardTemplate(child: ChildXXXXXXXX,clickAction:() ->Unit) {
                 )
             }
 
-//            Image(
-//                imageResource(id = R.drawable.coin),
-//                modifier = Modifier.height(child.child[0].child[0].height.dp).width(child.child[0].child[0].width.dp)
-//            )
             Spacer(modifier = Modifier.padding(vertical = child.child[0].child[1].verticalPadding.dp))
             Text(text = child.child[0].child[2].text,style=TextStyle(textAlign = TextAlign.Center))
         }

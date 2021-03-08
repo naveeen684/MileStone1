@@ -1,7 +1,5 @@
-package com.example.sdui1.data.ContactPage
+package com.example.sdui1.data.SettingsPage
 
-
-import com.google.gson.annotations.SerializedName
 
 data class ChildX(
     val component: String,
